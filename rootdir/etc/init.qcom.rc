@@ -217,6 +217,65 @@ on post-fs-data
     # Make MTU adjusting
     write /proc/sys/net/ipv4/tcp_mtu_probing 1
 
+    # Create dir for TUI
+    mkdir /data/vendor/tui 0700 system system
+
+on charger
+    start vendor.power_off_alarm
+    setprop sys.usb.controller a600000.dwc3
+    setprop vendor.usb.controller a600000.dwc3
+    setprop sys.usb.configfs 1
+    setprop vendor.setup.power 1
+
+    write /sys/devices/system/cpu/cpu1/online 0
+    write /sys/devices/system/cpu/cpu2/online 0
+    write /sys/devices/system/cpu/cpu3/online 0
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu7/online 0
+
+on property:ro.vendor.iocgrp.config=1
+    mkdir /dev/blkio
+    mount cgroup none /dev/blkio blkio
+    chown system system /dev/blkio
+    chown system system /dev/blkio/tasks
+    chmod 0664 /dev/blkio/tasks
+    mkdir /dev/blkio/bg 0755 system system
+    chown system system /dev/blkio/bg/tasks
+    chmod 0664 /dev/blkio/bg/tasks
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/bg/blkio.weight 100
+
+on property:persist.vendor.ssr.enable_ramdumps=1 && property:ro.boot.mode!=charger
+    mkdir /data/vendor/ramdump_ssr 770 system system
+
+on property:sys.boot_completed=1
+    setprop vendor.setup.power 1
+
+    # FPS Info permissions
+    chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
+    chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
+
+    # WDSP FW boot sysfs node used by STHAL
+    chown media audio /sys/kernel/wdsp0/boot
+    chown media audio /sys/kernel/wcd_cpe0/fw_name
+
+    # Runtime fs tuning
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sde/queue/read_ahead_kb 128
+    write /sys/block/sde/queue/nr_requests 128
+    write /sys/block/sde/queue/iostats 1
+
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+
+    # Block layer tuning: discard chunk size up to 128MB
+    # Otherwise, contiguous discards can be merged
+    write /sys/block/sda/queue/discard_max_bytes 134217728
+
     setprop vold.post_fs_data_done 1
 
 on property:sys.boot_completed=1
