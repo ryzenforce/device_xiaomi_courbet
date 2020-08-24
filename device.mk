@@ -123,7 +123,7 @@ PRODUCT_PACKAGES += \
     Snap
 
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
+    GoogleCameraGo
 
 PRODUCT_PACKAGES += \
     libshim_megvii
