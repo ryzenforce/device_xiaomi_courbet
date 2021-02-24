@@ -61,4 +61,12 @@ def AddBasebandAssertion(info, input_zip):
       if (len(hwc) and len(modem_version) and len(firmware_version)):
         cmd = 'assert(getprop("ro.boot.hwc") == "{0}" && (xiaomi.verify_baseband("{1}") == "1" || abort("ERROR: This package requires firmware from MIUI {2} or newer. Please upgrade firmware and retry!");) || true);'
         info.script.AppendExtra(cmd.format(hwc, modem_version, firmware_version))
+
+  # device checks
+  info.script.Print("Performing device checks for NFC...")
+  DeviceChecks(info, "device_nfc_check.sh", "system", "ext4")
+  return
+
+def DeviceChecks(info, name, partition, fs_type):
+  info.script.AppendExtra(('run_program("/tmp/install/bin/%s", map_partition("%s"), "%s");' % (name, partition, fs_type)))
   return
