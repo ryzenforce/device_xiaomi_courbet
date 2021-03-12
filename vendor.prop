@@ -19,6 +19,7 @@ ro.vendor.audio.soundfx.usb=true
 ro.af.client_heap_size_kbyte=7168
 ro.config.vc_call_vol_steps=11
 ro.vendor.audio.us.type=mius
+persist.vendor.audio.voicecall.speaker.stereo=true
 vendor.audio.feature.compr_voip.enable=false
 vendor.voice.path.for.pcm.voip=false
 vendor.audio.adm.buffering.ms=6
