@@ -93,6 +93,10 @@ DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_mani
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/compatibility_matrix.xml
 ODM_MANIFEST_FILES += $(DEVICE_PATH)/configs/hidl/manifest-qva.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_courbet
+TARGET_RECOVERY_DEVICE_MODULES := libinit_courbet
+
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom \
                         androidboot.memcg=1 \
