@@ -16,6 +16,9 @@ elliptic.ultrasound.               u:object_r:vendor_sensors_prop:s0
 elliptic.ultrasound.multiple_mics. u:object_r:vendor_ultrasound_prop:s0
 invn.hal                           u:object_r:vendor_sensors_prop:s0
 
+# Dirac
+persist.audio.dirac.                u:object_r:dirac_prop:s0
+
 # Fingerprint
 persist.vendor.sys.fp.             u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                   u:object_r:vendor_fp_prop:s0
