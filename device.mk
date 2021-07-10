@@ -66,7 +66,8 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener
+    libvolumelistener \
+    libtinycompress
 
 PRODUCT_PACKAGES += \
     libaudio-resampler
