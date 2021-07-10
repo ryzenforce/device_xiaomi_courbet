@@ -21,6 +21,9 @@ DEVICE_PATH := device/xiaomi/courbet
 # Inherit from proprietary files
 include vendor/xiaomi/courbet/BoardConfigVendor.mk
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := courbet,courbetin
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
