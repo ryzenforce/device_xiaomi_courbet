@@ -23,6 +23,9 @@ PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# API level, the device has been commercially launched on
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/courbet/courbet-vendor.mk)
 
