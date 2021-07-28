@@ -210,4 +210,4 @@ wifi.aware.interface=wifi-aware0
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
-ro.soc.model=SDM7150
+ro.soc.model=SM7150
