@@ -22,3 +22,5 @@ allow hal_power_default input_device:chr_file { read write };
 
 # To get/set powerhal state property
 set_prop(hal_power_default, vendor_power_prop)
+
+binder_call(hal_power_default, system_app)
