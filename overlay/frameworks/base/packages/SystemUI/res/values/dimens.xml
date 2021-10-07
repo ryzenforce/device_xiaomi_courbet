@@ -20,4 +20,7 @@
     <dimen name="config_rounded_mask_size">146px</dimen>
     <dimen name="config_rounded_mask_size_top">146px</dimen>
     <dimen name="config_rounded_mask_size_bottom">146px</dimen>
+ 
+    <dimen name="physical_power_button_center_screen_location_y">1100px</dimen>
+    <dimen name="physical_fingerprint_sensor_center_screen_location_y">1100px</dimen>
 </resources> 
