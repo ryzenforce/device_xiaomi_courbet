@@ -354,13 +354,8 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_PACKAGES += \
-    librecovery_updater_xiaomi
-
-PRODUCT_PACKAGES += \
-    init.recovery.qcom.rc
-
-# Recovery
-PRODUCT_PACKAGES += \
+    librecovery_updater_xiaomi \
+    init.recovery.qcom.rc \
     fastbootd
 
 # Sensors
@@ -382,7 +377,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
 
-<<<<<<< HEAD
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
