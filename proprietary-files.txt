@@ -657,7 +657,6 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvtutils.so
@@ -707,6 +706,9 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+
+# IMS - from LA.UM.9.1.r1-10200-SMxxx0.0 and patched
+system_ext/lib64/lib-imsvideocodec.so|7cd1c0e0be77e95164a894e8c17aa72146b0cea6
 
 # IPA
 vendor/etc/init/ipa_fws.rc
