@@ -16,11 +16,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter courbet davinci phoenix surya sweet toco violet,$(TARGET_DEVICE)),)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-
-include $(CLEAR_VARS)
+ifeq ($(TARGET_DEVICE),courbet)
+  subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
+  $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.
