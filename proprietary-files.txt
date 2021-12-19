@@ -563,6 +563,9 @@ vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
+# DRM - from mata OPM1.170911.254
+vendor/lib64/libspl.so|0cf185c22519bbae1e1232928fda151f538f9977
+
 # DSP
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
@@ -1006,4 +1009,3 @@ vendor/bin/cnss-daemon
 
 # Xiaomi MAC
 vendor/bin/nv_mac
-
