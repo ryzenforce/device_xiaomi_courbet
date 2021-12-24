@@ -29,7 +29,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
 
-PRODUCT_NAME := ancient_ courbet
+PRODUCT_NAME := ancient_courbet
 PRODUCT_DEVICE := courbet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 11 Lite 4G
