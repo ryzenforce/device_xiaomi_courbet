@@ -8,3 +8,8 @@ ro.miui.                       u:object_r:exported_system_prop:s0
 ro.carrier.name                u:object_r:exported_default_prop:s0
 ro.product.marketname          u:object_r:build_prop:s0
 ro.product.mod_device          u:object_r:build_prop:s0
+
+# Camera
+ro.camera.req.fmq.                    u:object_r:exported_default_prop:s0
+ro.camera.res.fmq.                    u:object_r:exported_default_prop:s0
+
