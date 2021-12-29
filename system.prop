@@ -22,6 +22,12 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
 
+# Media Volume Steps
+ro.config.media_vol_default=10 
+ro.config.media_vol_steps=25 
+ro.config.vc_call_vol_default=7 
+ro.config.vc_call_vol_steps=11
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q6150-17263-1
 
