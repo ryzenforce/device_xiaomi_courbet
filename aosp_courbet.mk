@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/courbet/device.mk)
 
 # Inherit common ArcanaOS configurations
-$(call inherit-product, vendor/arcana/config/common_full_phone.mk)
+$(call inherit-product, vendor/arcana/aosp/common.mk)
 $(call inherit-product, vendor/aosp/config/telephony.mk)
 $(call inherit-product, vendor/aosp/config/arcana_props.mk)
 
