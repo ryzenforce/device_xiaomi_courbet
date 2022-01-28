@@ -31,6 +31,7 @@ IS_PHONE := true
 ARCANA_DEVICE := Courbet
 ARCANA_MAINTAINER := AuroraTech
 WITH_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 PRODUCT_NAME := aosp_courbet
 PRODUCT_DEVICE := courbet
