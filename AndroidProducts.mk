@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/ancient_courbet.mk
+    $(LOCAL_DIR)/aosp_courbet.mk
 
 COMMON_LUNCH_CHOICES := \
-    ancient_courbet-eng \
-    ancient_courbet-userdebug \
-    ancient_courbet-user
+    aosp_courbet-eng \
+    aosp_courbet-userdebug \
+    aosp_courbet-user
