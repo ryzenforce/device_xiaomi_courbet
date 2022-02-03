@@ -117,11 +117,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service_64 \
     libdng_sdk.vendor
 
-PRODUCT_PACKAGES += \
-    Snap
+#PRODUCT_PACKAGES += \
+    #Snap
 
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
+#PRODUCT_PACKAGES += \
+    #GoogleCameraGo
 
 PRODUCT_PACKAGES += \
     libshim_megvii
