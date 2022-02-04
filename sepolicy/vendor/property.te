@@ -1,9 +1,6 @@
 # Ultrasound
 type vendor_ultrasound_prop, property_type;
 
-# Fingerprint
-type vendor_fp_prop, property_type;
-
 # Init
 type vendor_device_prop, property_type;
 
