@@ -30,6 +30,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class PickupSensor implements SensorEventListener {
+
     private static final boolean DEBUG = false;
     private static final String TAG = "PickupSensor";
 
@@ -49,12 +50,13 @@ public class PickupSensor implements SensorEventListener {
         mExecutorService = Executors.newSingleThreadExecutor();
     }
 
-    private Future<?> submit(Runnable runnable) { return mExecutorService.submit(runnable); }
+    private Future<?> submit(Runnable runnable) {
+        return mExecutorService.submit(runnable);
+    }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (DEBUG)
-            Log.d(TAG, "Got sensor event: " + event.values[0]);
+        if (DEBUG) Log.d(TAG, "Got sensor event: " + event.values[0]);
 
         long delta = SystemClock.elapsedRealtime() - mEntryTimestamp;
         if (delta < MIN_PULSE_INTERVAL_MS) {
@@ -64,7 +66,7 @@ public class PickupSensor implements SensorEventListener {
         mEntryTimestamp = SystemClock.elapsedRealtime();
 
         if (event.values[0] == 1) {
-            DozeUtils.wakeOrLaunchDozePulse(mContext);
+            DozeUtils.launchDozePulse(mContext);
         }
     }
 
@@ -74,17 +76,18 @@ public class PickupSensor implements SensorEventListener {
     }
 
     protected void enable() {
-        if (DEBUG)
-            Log.d(TAG, "Enabling");
+        if (DEBUG) Log.d(TAG, "Enabling");
         submit(() -> {
-            mSensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorManager.registerListener(this, mSensor,
+                    SensorManager.SENSOR_DELAY_NORMAL);
             mEntryTimestamp = SystemClock.elapsedRealtime();
         });
     }
 
     protected void disable() {
-        if (DEBUG)
-            Log.d(TAG, "Disabling");
-        submit(() -> { mSensorManager.unregisterListener(this, mSensor); });
+        if (DEBUG) Log.d(TAG, "Disabling");
+        submit(() -> {
+            mSensorManager.unregisterListener(this, mSensor);
+        });
     }
 }
