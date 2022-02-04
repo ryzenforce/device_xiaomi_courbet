@@ -27,7 +27,7 @@ $(call inherit-product, vendor/aosp/config/arcana_props.mk)
 
 # Inherit some common ArcanaOS
 ARCANA_DEVICE := Courbet
-ARCANA_MAINTAINER := AuroraTech
+ARCANA_MAINTAINER := Ryzen
 ARCANA_OFFICIAL := false
 #WITH_GAPPS := true
 WITH_LAWNCHAIR := true
