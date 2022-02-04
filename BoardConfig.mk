@@ -121,6 +121,8 @@ TARGET_KERNEL_CONFIG := courbet_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/courbet
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+TARGET_KERNEL_CLANG_VERSION := proton
+KERNEL_TOOLCHAIN_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-proton/bin/aarch64-linux-gnu-
 
 # Media
 TARGET_USES_ION := true
