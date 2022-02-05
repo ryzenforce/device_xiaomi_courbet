@@ -29,12 +29,13 @@ $(call inherit-product, vendor/aosp/config/arcana_props.mk)
 ARCANA_DEVICE := Courbet
 ARCANA_MAINTAINER := Ryzen
 ARCANA_OFFICIAL := false
-#WITH_GAPPS := true
+WITH_GAPPS := true
 WITH_LAWNCHAIR := true
 TARGET_BOOT_ANIMATION_RES := 1080
 IS_PHONE := true
 TARGET_SUPPORTS_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_LAWNCHAIR := true
 
 PRODUCT_NAME := aosp_courbet
 PRODUCT_DEVICE := courbet
