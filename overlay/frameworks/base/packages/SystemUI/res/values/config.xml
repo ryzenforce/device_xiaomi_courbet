@@ -22,6 +22,8 @@
     <dimen name="rounded_corner_content_padding">30px</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_start">8dp</dimen>
+    <dimen name="status_bar_padding_end">0dp</dimen>
     <dimen name="status_bar_padding_top">11dp</dimen>
 
     <!-- Doze: does this device support STATE_DOZE?  -->
