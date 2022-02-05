@@ -53,3 +53,7 @@ ro.recovery.ui.margin_height=48
 
 # WiFi
 wifi.interface=wlan0
+
+# Remove GBoard Spacing
+ro.com.google.ime.kb_pad_port_b=1
+
